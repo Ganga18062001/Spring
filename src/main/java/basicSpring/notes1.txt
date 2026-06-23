@@ -1,0 +1,137 @@
+
+-----------spring---------------------------
+
+-Open source java framework
+-we can develop standalone and enterprise application.
+-2003 (Initial release)
+-2004 (production release 1.0)
+-we developed by "Rod Johnson"
+
+
+-------Advantage of spring framework-------------------
+
+1)lightWeight
+
+2)flexible Configuration
+
+-multiple configuration option
+-ex - xml , java-based confirgation and annotation based config
+
+3)Dependency injection
+
+4) Aspect-oriented programming
+
+5) simplified database access
+
+-spring jdbc and object-relational mapping(ORM) support (e.g ,Hibernate,JPA)
+
+-improve data access efficiency
+
+6)Testing support
+
+-writting unit tests and support integration testing
+
+7)security
+
+-spring security provides a robust framework for implementing authentication and authorization
+-making it easier to secure web application
+
+8) open source
+
+9)Integration capabilities
+
+- we can integrate spring appliaction with various framework such as angular , react
+and other third party libraries and APIs
+
+-------------spring Container--------------
+
+-It is heart of spring.
+
+=>Responsibility
+
+-Manage bean object
+-Manage bean life-cycle
+-AOP
+-Transaction management
+
+--------Types of spring container--------------
+
+1)BeanFactory(old)
+2)ApplicationContext(new)(Interface)
+
+---------------working-------------
+
+=> POJO class (Plain old java object)
+
+This is a POJO because:
+
+It is a normal Java class
+No special inheritance required
+No special methods required
+syntax of pojo class =>
+
+
+
+---------------------2. JavaBean class-----------------------------------
+
+A JavaBean is a special type of POJO that follows some rules.
+
+-class must be public
+-Must have a public no-argument constructor
+-Fields should be private
+-Provide public getter and setter methods
+-Usually implements Serializable
+
+class Student{
+
+
+  private string name;
+  private int rollNo;
+
+  //getter and setter method
+}
+
+------------pojo vs bean class---------------
+
+| POJO                         | JavaBean                                         |
+| ---------------------------- | ------------------------------------------------ |
+| Simple Java object           | Special type of POJO                             |
+| No strict rules              | Must follow rules                                |
+| Can have any constructor     | Requires no-arg constructor                      |
+| Fields can be public/private | Fields should be private                         |
+| Getter/setter optional       | Getter/setter required                           |
+| Serializable optional        | Usually Serializable                             |
+| Used everywhere              | Used in frameworks (Spring, Hibernate, JSP etc.) |
+
+-------------------------------------------------------------------
+
+-firstly we have create pojo class/java bean class then
+we have do confirgation, uisng xml file , annontations and java file
+
+then spring container read that both pojo class / javabean class and configuration class and create object
+
+---------------------------------------------------------------
+
+=> The applicationContext(Spring Container ) ia an interface in spring which is
+used to manage beans , handle application events and access resourses
+
+=> Some implemented classes of ApplicationContext are :-
+ 1)ClassPathXmlApplicationContext(used for xml confirgation files)
+
+ 2)AnnotationConfigApplicationContext(Used for java confirgations files)
+
+ @Component annotation is used to declare a class as a spring bean,
+ which is automatically detected and managed during application startup
+
+ @Value annotation is used to inject values into spring bean fields or methods
+
+ @ComponentScan annotation is used to instruct the spring framework to perform
+ component scanning
+
+
+
+
+
+
+
+

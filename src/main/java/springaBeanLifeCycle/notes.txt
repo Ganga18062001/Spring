@@ -1,0 +1,90 @@
+
+=> A JavaBean is a java class that follows the following rules : -
+
+1)It should have private properties
+2)It should provide public getter and setter methods to get and set the values in properties
+3)It should have public no-arg constructor or default constructor
+
+------------java bean object -------------------------------------
+-java bean object ia an instance of java bean class.
+-It is reusable ,encapsulated java componenet with properties , getter and setters,designed for
+easy integration and manipulation
+
+------------bean life cycle------------------------
+
+
+2)Loading bean definition (xml or java or annotations based or componenet scanning ) :-
+
+- Spring loads bean definations form various such as xml confirgation
+files , java-based configuration classes or component scanning.
+
+- These bean definitions contain information about the bean class , dependencies and other configuration details.
+
+3)Bean Instantiation (Bean object is created and all field instan default val): -
+
+-after bean defination are loaded , the spring container creates instance of beans
+based on these definitions.
+
+-it invoking the bean class constructor,either default constructor or non-parameterized constr
+
+-it create actual instance of the bean.
+
+4)Bean Initialization (Bean object is initialize and all properties initialize to original value) :
+
+xml file - property tag
+java file - setter
+annontation conf file - @values("n")
+using
+@Values("") and getter  and setter method
+
+5)Bean ready(Context.getBean())
+
+6)Bean Destruction(Bean object is destroy or deleted)
+
+here uisng destroy() method , main method is destroy.
+
+------------------BeanPostProcessor--------------------------
+-In spring , it is an interface that enables custom logic to be executed before
+and after the initialization of spring beans
+-------------------------------------------------------------------
+
+1)Bean creation
+2)Dependency injection
+3)Aware callbacks
+4)BeanPostProcessor before initialization
+5)Initialization callback
+6)BeanPostProcessor after initialization
+7)Bean usage
+8)Destruction callback
+--------------------------------------------------------------------
+Create Bean
+     |
+     ↓
+Instantiate Object
+     |
+     ↓
+Populate Properties (Dependency Injection)
+     |
+     ↓
+Aware Interfaces
+     |
+     ↓
+BeanPostProcessor (before initialization)
+     |
+     ↓
+Initialization methods
+     |
+     ↓
+BeanPostProcessor (after initialization)
+     |
+     ↓
+Bean Ready to Use
+     |
+     ↓
+Destroy method
+
+
+
+
+
+
