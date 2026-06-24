@@ -1,0 +1,76 @@
+---------dependency injection-------------
+
+-It is a design pattern.
+
+-Its main task is to "inject the dependency" means
+inject one object into another object.
+
+-It is used to achieve "loose coupling" in java.
+
+-we can achieve dependency injection by 2 ways :-
+1)setter method DI
+2)constructor DI
+
+Example :-
+class Student{                            class Address{
+                                           private String city;
+private String name;                        private int pincode;
+private int rollNo;                           }
+private Address address
+}
+
+---------------why we use dependency injection---------------
+
+1)Hard coding
+
+-directly putting specific value(i.e numbers or strings) in your code
+rather than using variable or external confirgation.
+
+- later changing code more chanllenging.
+
+syntax :-
+
+public class Calculator{
+
+public int add(){
+
+int result = 5 + 3;
+return result;
+
+}
+}
+
+2)Tightly couple
+
+-Tightly coupled classes have a strong dependency.
+
+-One class directly depends on another.
+
+syntax :-
+
+class Engine{
+public void start(){
+//start the engine
+}
+}
+
+public class Car{
+private Engine engine;
+
+public car(){
+engine = new Engine();
+}
+public void start(){
+engine.start();
+}
+
+}
+ex- inheritance
+
+3)Loosely coupled classes:-
+
+-Loosely coupled classes minimized dependencies .
+
+-make code more maintainable and flexible
+
+example - interface

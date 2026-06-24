@@ -1,0 +1,13 @@
+
+DEPENDENCY INJCTION
+
+-Dependency injection is a design pattern used in the spring framework
+to achive inversion of control(IOC)
+
+-injecting one object dependency into another object
+
+-we have achive dependency injection by 2 ways:-
+1)setter method di
+
+2)Constructor di
+
