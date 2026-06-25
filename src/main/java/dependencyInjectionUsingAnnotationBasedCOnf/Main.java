@@ -1,4 +1,4 @@
-package dependencyInjection;
+package dependencyInjectionUsingAnnotationBasedCOnf;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -10,6 +10,7 @@ public class Main {
         ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         Student bean = context.getBean(Student.class);
         bean.display();
+
 
     }
 }
