@@ -1,0 +1,11 @@
+--------autowiring-------------
+
+-It is the features of spring framework by which we can achive
+"DI automatically".
+
+-Aautomatically manages the connection between objects.
+
+=>Autowiring can be achived by :-
+1)AnnotationBasedAutowiring------->@Autowired
+
+2)XML based autowiring--------->"autowire" attributes
