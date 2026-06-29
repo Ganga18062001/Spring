@@ -9,3 +9,22 @@
 1)AnnotationBasedAutowiring------->@Autowired
 
 2)XML based autowiring--------->"autowire" attributes
+
+----------disadvantage of @Aoutowiring-------------
+
+-It can achived only on non-primitive or user-defined
+data types non-primitive.
+
+-But String, int, double are not automatically beans.
+
+
+
+------------multiple bean  is created of same object---------
+
+-The @Qualifier in spring helps pick the right bean among multiple
+beans of the same type.
+
+-it helps spring to known which bean you want to inject , resolving ambiguity.
+
+-----------@Primary-----------
+When you have multiple beans of the same type, mark one bean as the default using @Primary.

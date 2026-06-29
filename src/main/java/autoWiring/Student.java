@@ -1,13 +1,19 @@
 package autoWiring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Student {
 
     private String  name;
     private int rollno;
     @Autowired
+    @Qualifier("createAddrObj2")
     private Address address;
+
+    @Autowired
+    private Subject subject;
+
 
     public String getName() {
         return name;
@@ -25,18 +31,27 @@ public class Student {
         this.rollno = rollno;
     }
 
-    public Address getAddress() {
-        return address;
-    }
+//    public Address getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(Address address) {
+//        this.address = address;
+//    }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+//    public Subject getSubject() {
+//        return subject;
+//    }
+//
+//    public void setSubject(Subject subject) {
+//        this.subject = subject;
+//    }
 
     public void display(){
 
         System.out.println("Name : "+name);
         System.out.println("Rollno : "+rollno);
         System.out.println("Address : "+address);
+        System.out.println("SubjectList : "+subject);
     }
 }
